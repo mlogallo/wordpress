@@ -25,9 +25,9 @@ locals {
 # Deploy the Hello-Kubernetes Application Pod using the Helm Provider
 #_____________________________________________________________________
 
-resource "helm_release" "hello_iks_app" {
-  name      = "helloiksapp"
-  namespace = "default"
+resource "helm_release" "mediawiki_app" {
+  name      = "mediawiki"
+  namespace = "mediawikins"
   chart     = "https://github.com/mlogallo/multi-tier-app/blob/main/mediawiki.tgz"
   set {
     name  = "MESSAGE"
