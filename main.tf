@@ -27,7 +27,7 @@ locals {
 
 resource "helm_release" "mediawiki" {
   name      = "mediawiki"
-  namespace = "mediawikins"
+  namespace = "default"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "mediawiki"
   set {
