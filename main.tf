@@ -28,7 +28,7 @@ locals {
 resource "helm_release" "mediawiki_app" {
   name      = "mediawiki"
   namespace = "mediawikins"
-  chart     = "https://github.com/mlogallo/multi-tier-app/blob/main/mediawiki.tgz"
+  chart     = "https://github.com/mlogallo/multi-tier-app/blob/main/mediawiki.tgz?raw=true"
   set {
     name  = "MESSAGE"
     value = "Hello Intersight Kubernetes Service from Terraform Cloud for Business!!"
