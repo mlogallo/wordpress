@@ -25,10 +25,10 @@ locals {
 # Deploy the Hello-Kubernetes Application Pod using the Helm Provider
 #_____________________________________________________________________
 
-resource "helm_release" "mediawiki_app" {
-  name      = "mediawiki"
+resource "helm_release" "mariadb" {
+  name      = "mariadb"
   namespace = "mediawikins"
-  chart     = "http://10.2.0.88:8080/mediawiki.tgz"
+  chart     = "http://10.2.0.88:8080/mariadb.tgz"
   set {
     name  = "MESSAGE"
     value = "Hello Intersight Kubernetes Service from Terraform Cloud for Business!!"
