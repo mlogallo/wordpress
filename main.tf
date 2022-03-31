@@ -30,8 +30,8 @@ resource "helm_release" "wordpress" {
   namespace = "default"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "wordpress"
-  set {
-    wordpressUsername  = "user"
-    wordpressPassword = "Sanfran1234"
-  }
+ # set {
+ #   wordpressUsername  = "user"
+ #   wordpressPassword = ""
+ # }
 }
