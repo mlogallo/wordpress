@@ -30,8 +30,8 @@ resource "helm_release" "wordpress" {
   namespace = "default"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "wordpress"
-#  set {
-#    name  = "MESSAGE"
-#    value = "Hello Intersight Kubernetes Service from Terraform Cloud for Business!!"
-#  }
+  set {
+    wordpressUsername  = user
+    wordpressPassword = "Sanfran1234"
+  }
 }
