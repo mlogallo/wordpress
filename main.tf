@@ -31,7 +31,7 @@ resource "helm_release" "wordpress" {
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "wordpress"
   set {
-    wordpressUsername  = user
+    wordpressUsername  = "user"
     wordpressPassword = "Sanfran1234"
   }
 }
