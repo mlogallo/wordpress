@@ -25,13 +25,13 @@ locals {
 # Deploy the Hello-Kubernetes Application Pod using the Helm Provider
 #_____________________________________________________________________
 
-resource "helm_release" "mediawiki" {
-  name      = "mediawiki"
+resource "helm_release" "wordpress" {
+  name      = "wordpress"
   namespace = "default"
   repository = "https://charts.bitnami.com/bitnami"
-  chart      = "mediawiki"
-  set {
-    name  = "MESSAGE"
-    value = "Hello Intersight Kubernetes Service from Terraform Cloud for Business!!"
-  }
+  chart      = "wordpress"
+#  set {
+#    name  = "MESSAGE"
+#    value = "Hello Intersight Kubernetes Service from Terraform Cloud for Business!!"
+#  }
 }
