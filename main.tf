@@ -28,7 +28,7 @@ locals {
 resource "helm_release" "hello_iks_app" {
   name      = "helloiksapp"
   namespace = "default"
-  chart     = "https://prathjan.github.io/helm-chart/helloiks-0.1.0.tgz"
+  chart     = "https://github.com/mlogallo/multi-tier-app/blob/main/mediawiki.tgz"
   set {
     name  = "MESSAGE"
     value = "Hello Intersight Kubernetes Service from Terraform Cloud for Business!!"
